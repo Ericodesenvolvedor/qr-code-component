@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+    --background-card: hsl(0, 0%, 100%);
+    --paragrath: hsl(220, 15%, 55%);
+    --title: hsl(218, 44%, 22%);
+    --background-body:  hsl(212, 45%, 89%);
+
+    font-size: 62.5%;
+    font-family: 'Outfit', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* margin-inline: 2rem; */
+    width: 100%;
+    height: 100vh;
+    font-size: 1.6rem;
+    background-color: var(--background-body);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > #card-main {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.075);
+    width: 35rem;
+    background-color: var(--background-card);
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+#card-main > #container-qrCode {
+    max-width: 100%;
+    height: auto;
+}
+
+#card-main > #container-qrCode > img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+#card-main > #content {
+    text-align: center;
+    padding: 1rem;
+}
+
+#card-main > #content > header {
+    margin-block: 1rem;
+}
+
+#card-main > #content > header > h1 {
+    font-size: 2.3rem;
+    color: var(--title);
+}
+
+#card-main > #content > p {
+    color: var(--paragrath);
+    padding-inline: 1.5rem;
+}
+
+#card-main > #content > p > .uppercase-text {
+    text-transform: uppercase;
+}
+
+#card-main > #content > p > .capitalize-text {
+    text-transform: capitalize;
+}
+
+@media screen and (max-width: 375px) {
+    body > #card-main {
+        width: 30rem;
+    }
+
+    #card-main > #content > header > h1 {
+        font-size: 2rem;
+    }
+
+    #card-main > #content > p {
+        padding-inline: .1rem;
+    }
+}
